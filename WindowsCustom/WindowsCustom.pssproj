@@ -7,7 +7,19 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>MyApplication</RootNamespace>
     <AssemblyName>MyApplication</AssemblyName>
-    <Name>Test</Name>
+    <Name>WindowsCustom</Name>
+    <Author>Raul Tambre</Author>
+    <CompanyName />
+    <Copyright />
+    <Description>A program that configures stuff according to my preferences. Also sets up some other various software.</Description>
+    <Guid>ab45c2bd-cec2-4c08-9caf-dd548470d902</Guid>
+    <Version>1.0</Version>
+    <ClrVersion />
+    <PowerShellHostVersion />
+    <PowerShellVersion />
+    <ProcessorArchitecture />
+    <RequiredModules />
+    <ProjectHome />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -26,9 +38,17 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Compile Include="Script.ps1" />
+    <Compile Include="common.psm1" />
+    <Compile Include="custom.profile.ps1" />
+    <Compile Include="customize.ps1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.pssproj">
+      <Name>Common</Name>
+      <Project>{a3a463fd-5136-4736-a931-4a5c2f74e9a1}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="Build" />
