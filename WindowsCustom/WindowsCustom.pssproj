@@ -42,6 +42,7 @@
     <Compile Include="common.psm1" />
     <Compile Include="custom.profile.ps1" />
     <Compile Include="customize.ps1" />
+    <Compile Include="Microsoft.PowerShell_profile.ps1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.pssproj">
