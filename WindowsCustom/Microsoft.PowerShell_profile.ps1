@@ -1,2 +1,2 @@
-# Load the custom profile from the current directory
-& "$env:USERPROFILE/Documents/WindowsPowerShell/custom.profile.ps1" "$PSScriptRoot"
+# Execute the custom profile script from the profile directory
+& "$env:USERPROFILE/Documents/WindowsPowerShell/custom.profile.ps1"
