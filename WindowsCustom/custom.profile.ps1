@@ -33,13 +33,13 @@ Start-SshAgent -Quiet
 # Add my key to the SSH-agent (Doesn't seem to be needed, as ssh-agent by default asks for the key first time on startup. Oh fuck me.)
 $ssh_add = "$env:ProgramW6432/Git/usr/bin/ssh-add.exe"
 $ssh_keygen = "$env:ProgramW6432/Git/usr/bin/ssh-keygen.exe"
-$my_key_path = "$env:USERPROFILE/.ssh/id_rsa"
+$my_key_path = "$env:USERPROFILE/.ssh/id_ed25519"
 
 # Get my key and already added SSH keys
 $my_key = & "$ssh_keygen" -lf $my_key_path
 $ssh_keys = & $ssh_add -l
 
-# Split my key only into the part after the colon and before the e-mail (ie. "4096 SHA256:blablabla email@email.com" becomes "blablabla")
+# Split my key only into the part after the colon and before the e-mail (ie. "SHA256:blablabla email@email.com" becomes "blablabla")
 $my_key = $my_key.Substring($my_key.IndexOf(":") + 1)
 $my_key = $my_key.Substring(0, $my_key.IndexOf(" "))
 
