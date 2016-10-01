@@ -7,11 +7,11 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>MyApplication</RootNamespace>
     <AssemblyName>MyApplication</AssemblyName>
-    <Name>WindowsCustom</Name>
+    <Name>Scripwal</Name>
     <Author>Raul Tambre</Author>
     <CompanyName />
     <Copyright />
-    <Description>A program that configures stuff according to my preferences. Also sets up some other various software.</Description>
+    <Description>A program that configures stuff according to my preferences.</Description>
     <Guid>ab45c2bd-cec2-4c08-9caf-dd548470d902</Guid>
     <Version>1.0</Version>
     <ClrVersion />
@@ -41,7 +41,7 @@
   <ItemGroup>
     <Compile Include="common.psm1" />
     <Compile Include="custom.profile.ps1" />
-    <Compile Include="customize.ps1" />
+    <Compile Include="scripwal.ps1" />
     <Compile Include="Microsoft.PowerShell_profile.ps1" />
   </ItemGroup>
   <ItemGroup>

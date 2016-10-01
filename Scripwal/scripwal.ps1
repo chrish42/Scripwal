@@ -10,13 +10,13 @@ param(
 # Print the usage and help, if requested
 if ($help)
 {
-	Write-Host "Usage: ./customize.ps1 [-h] [-s] [-r] [-p]"
+	Write-Host "Usage: ./scripwal.ps1 [-h] [-s] [-r] [-c]"
 	Write-Host ""
 	Write-Host "Options:"
-	Write-Host "            -help         Show help"
-	Write-Host "      -systemwide(false)  Apply the changes to the whole local machine"
-	Write-Host "        -registry(true)   Apply some registry tweaks"
-	Write-Host "  -custom_profile(true)   Add a custom PowerShell profile, which overrides the default profile"
+	Write-Host "            -help  Show help"
+	Write-Host "      -systemwide  Apply the changes to the whole local machine (default: false)"
+	Write-Host "        -registry  Apply some registry tweaks (default: true)"
+	Write-Host "  -custom_profile  Add a custom PowerShell profile, which overrides the default profile (default: true)"
 	exit
 }
 
